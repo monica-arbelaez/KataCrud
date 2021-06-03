@@ -1,11 +1,14 @@
-package co.com.sofka.crud;
+package co.com.sofka.crud.controller;
 
+
+import co.com.sofka.crud.Todo;
+import co.com.sofka.crud.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-public class TodoController {
+public class TodoContoller {
 
     @Autowired
     private TodoService service;
@@ -14,7 +17,7 @@ public class TodoController {
     public Iterable<Todo> list(){
         return service.list();
     }
-    
+
     @PostMapping(value = "api/todo")
     public Todo save(@RequestBody Todo todo){
         return service.save(todo);
