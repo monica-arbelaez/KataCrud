@@ -12,11 +12,9 @@ import org.mapstruct.Mappings;
 public interface TodoMapper {
 
     @Mappings({
-            @Mapping(source = "id", target = "id"),
-            @Mapping(source = "name", target = "name"),
-            @Mapping(source = "completed", target = "completed"),
-            @Mapping(source = "groupListId", target ="groupListId")
-
+            @Mapping(source = "grouplist", target = "grupo"),
+            @Mapping(source = "name", target = "nombre"),
+            @Mapping(source = "completed", target = "completado"),
     })
     TodoDTO aTodoDto(Todo todo);
 
@@ -24,4 +22,5 @@ public interface TodoMapper {
 
     @InheritInverseConfiguration
     Todo aTodo(TodoDTO todoDTO);
+
 }

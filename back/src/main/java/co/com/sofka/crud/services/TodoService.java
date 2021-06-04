@@ -1,5 +1,6 @@
 package co.com.sofka.crud.services;
 
+import co.com.sofka.crud.DAO;
 import co.com.sofka.crud.dto.TodoDTO;
 import co.com.sofka.crud.entity.Todo;
 import co.com.sofka.crud.mapper.TodoMapper;
@@ -8,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TodoService {
+public class TodoService implements DAO {
 
     @Autowired
     private TodoRepository repository;
+
     @Autowired
     private TodoMapper mapper;
 

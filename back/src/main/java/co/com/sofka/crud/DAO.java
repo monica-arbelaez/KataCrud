@@ -5,7 +5,8 @@ import co.com.sofka.crud.entity.Todo;
 
 public interface DAO {
 
- public Todo save(TodoDTO todo);
+ Iterable<TodoDTO> list();
+ public TodoDTO save(TodoDTO todo);
  public  void delete(Long id);
- public Todo get (Long id);
+ public TodoDTO get(Long id);
 }
