@@ -60,7 +60,7 @@ const Form = () => {
     };
 
     return <form ref={formRef}>
-        <input
+        <input className="inputTodo"
             type="text"
             nombre="nombre"
             placeholder="¿Qué piensas hacer hoy?"
@@ -68,8 +68,8 @@ const Form = () => {
             onChange={(event) => {
                 setState({ ...state, nombre: event.target.value });
             }}></input>
-        {item.id && <button onClick={onEdit}>Actualizar</button>}
-        {!item.id && <button onClick={onAdd}>Crear</button>}
+        {item.id && <button className="button" onClick={onEdit}>Actualizar</button>}
+        {!item.id && <button className="button"onClick={onAdd}>Crear</button>}
     </form>;
 };
 export default Form;

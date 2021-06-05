@@ -31,9 +31,9 @@ function reducer(state, action) {
         todoUp.push(action.item);
         return { ...state, todo: { list: todoUp, item: {} } };
       case 'add-todo-list' :
-        const todoListUp = state.todoListlist.list;
-        todoListUp.push(action.item);
-        return {...state, todoListlist: { list: todoListUp, item: {}}}
+        const todotUp = state.todo.list;
+        todotUp.push(action.item);
+        return {...state, todo: { list: todoUp, item: {}}}
          
       default:
         return state;

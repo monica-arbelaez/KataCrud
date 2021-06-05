@@ -53,10 +53,10 @@ const List = () => {
     return <div>
         <table>
             <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>Tarea</td>
-                    <td>¿Completado?</td>
+                <tr className="etiqueta">
+                    <td className="etiqueta">ID</td>
+                    <td className="etiqueta">Tarea</td>
+                    <td className="etiqueta">¿Completado?</td>
                 </tr>
             </thead>
             <tbody>
@@ -65,8 +65,8 @@ const List = () => {
                         <td>{todo.id}</td>
                         <td>{todo.nombre}</td>
                         <td><input type="checkbox" defaultChecked={todo.completado} onChange={(event) => onChange(event, todo)}></input></td>
-                        <td><button onClick={() => onDelete(todo.id)}>Eliminar</button></td>
-                        <td><button onClick={() => onEdit(todo)}>Editar</button></td>
+                        <td><button className="button"  onClick={() => onDelete(todo.id)}>Eliminar</button></td>
+                        <td><button className="button" onClick={() => onEdit(todo)}>Editar</button></td>
                     </tr>;
                 })}
             </tbody>

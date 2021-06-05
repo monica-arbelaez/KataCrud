@@ -1,15 +1,17 @@
 import React from 'react';
 import Form from './components/Form';
 import List from './components/List';
+import TodoListForm from'./components/TodoListForm';
 import { StoreProvider } from "./components/Store"
 
 function App() {
   return <StoreProvider>
     <div className="container">
-      <h3>To-Do List</h3>
+      <h1>To-Do List</h1>
       <Form />
       <List />
-      <h3>Listas Tareas</h3>
+      <h1>Listas Tareas</h1>
+      <TodoListForm />
     </div>
   </StoreProvider>
 }
