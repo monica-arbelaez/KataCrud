@@ -29,10 +29,10 @@ public class TodoListController {
     }
 
     @DeleteMapping(value = "api/{id}/todoList")
-    public void delete(@PathVariable("idList")Long idList){ service.delete(idList);}
+    public void delete(@PathVariable("id")Long id){ service.delete(id);}
 
-    @GetMapping(value = "api/{idList}/todoList")
-    public TodoList get(@PathVariable("idList") Long idList){ return service.get(idList);}
+    @GetMapping(value = "api/{id}/todoList")
+    public TodoList get(@PathVariable("id") Long id){ return service.get(id);}
 
 }
 

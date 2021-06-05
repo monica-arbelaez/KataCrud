@@ -14,7 +14,7 @@ public interface TodoMapper {
     @Mappings({
             @Mapping(source = "grouplist", target = "grupo"),
             @Mapping(source = "name", target = "nombre"),
-            @Mapping(source = "completed", target = "completado"),
+            @Mapping(source = "completed", target = "completado")
     })
     TodoDTO aTodoDto(Todo todo);
 
