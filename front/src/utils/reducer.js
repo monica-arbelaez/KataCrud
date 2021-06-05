@@ -30,10 +30,10 @@ function reducer(state, action) {
         const todoUp = state.todo.list;
         todoUp.push(action.item);
         return { ...state, todo: { list: todoUp, item: {} } };
-    //   case 'add-mayor-list' :
-    //     const mayorListUp = state.mayorlist.list;
-    //     mayorListUp.push(action.item);
-    //     return {...state, mayorlist: { list: mayorListUp, item: {}}}
+      case 'add-todo-list' :
+        const todoListUp = state.todoListlist.list;
+        todoListUp.push(action.item);
+        return {...state, todoListlist: { list: todoListUp, item: {}}}
          
       default:
         return state;
